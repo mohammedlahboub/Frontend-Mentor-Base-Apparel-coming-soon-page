@@ -16,7 +16,7 @@ module.exports = {
         'josefin-sans': ['"Josefin Sans"', 'sans-serifcc'], //font-family: 'Josefin Sans', sans-serif;
       },
       backgroundImage: {
-        'bg-pattern-desktop': "url('/images/bg-pattern-desktop.svg')",
+        'bg-pattern-desktop': "url('/public/images/bg-pattern-desktop.svg')",
       },
       boxShadow: {
         'this': '0 0.5rem 1rem 0.1rem hsl(0, 36%, 70%) ',
