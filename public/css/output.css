@@ -785,7 +785,7 @@ video {
          column-gap: 10rem;
   }
 
-  .md\:bg-bg-pattern-desktop {
+  .md\:bg-\[url\(\'\/public\/images\/bg-pattern-desktop\.svg\'\)\] {
     background-image: url('/public/images/bg-pattern-desktop.svg');
   }
 
