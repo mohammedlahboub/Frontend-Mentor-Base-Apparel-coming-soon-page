@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Base Apparel coming soon page</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="w-screen min-h-screen md:h-screen  " >
+    <main class="grid md:grid-cols-[1fr_max-content] md:grid-rows-[max-content_1fr] md:h-full md:pl-[10rem] md:gap-x-[10rem] ">
+      <header class="p-6">
+        <img src="./images/logo.svg" alt="Base Apparel Logo">
+      </header>
+      
+
+        <img class=" row-span-2 w-full md:hidden " src="./images/hero-mobile.jpg" alt="ahhhh...">
+        <img class=" row-span-2 hidden  md:block md:h-full  " src="./images/hero-desktop.jpg" alt="ahhhh...">
+      
+      <section class="font-josefin-sans flex flex-col gap-4 items-center px-5 py-12 md:items-start md:pt-[8rem] md:gap-8" >
+        <h1 class="flex flex-col items-center text-4xl uppercase  tracking-[0.5rem] md:items-start md:text-6xl">
+          <span class="text-desaturated-red font-light ">We're</span>
+          <span class="text-dark-grayish-red font-semibold ">coming</span>
+          <span class="text-dark-grayish-red font-semibold ">soon</span>
+        </h1>
+
+        <p class="text-desaturated-red  font-normal text-base text-center tracking-tight md:text-start">Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.</p>
+          <div id="emailErorDIV" class=" w-full flex outline outline-desaturated-red outline-1 rounded-[2rem] p-3 relative ">
+            <input class="focus-visible:outline-transparent w-4/5 placeholder:text-desaturated-red placeholder:opacity-50" type="email" placeholder="Email Address" name="Email" id="emailInput">
+            <img id="emailErorIMG" class="hidden absolute right-[5rem]" src="./images/icon-error.svg" alt="">
+            <button onclick="CheckEmail()" class="absolute top-2/4 -translate-y-2/4 -right-1 bg-gradient-to-r from-[hsl(0,80%,86%)] to-[hsl(0,74%,74%)] px-8 py-[0.95rem] rounded-[2rem] hover:shadow-this transition-shadow ease-in-out duration-200	 ">
+              <img src="./images/icon-arrow.svg" alt="">
+            </button>
+            <p id="emailErorTXT" class=" hidden absolute top-[4rem] text-soft-red">Please provide a valid email</p>
+          </div>
+      Coded by Mohammed Lahboub
+          
+      </section>
+    </main>
+  
+  
+    
+  <script>
+    function CheckEmail(){
+      const emailInputContent = document.querySelector("#emailInput").value
+
+      const emailErorDIV = document.querySelector("#emailErorDIV")
+      const emailErorIMG = document.querySelector("#emailErorIMG")
+      const emailErorTXT = document.querySelector("#emailErorTXT")
+
+      const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+      // I used openai Chat-Gpt to create this regex :)
+
+      
+      if (!regex.test(emailInputContent)) {
+        emailErorIMG.classList.remove("hidden")
+        emailErorTXT.classList.remove("hidden")
+        emailErorDIV.classList.add("red-outline")
+      } else {
+        emailErorIMG.classList.add("hidden")
+        emailErorTXT.classList.add("hidden")
+        emailErorDIV.classList.remove("red-outline")
+        
+      }
+      
+    }
+  </script>
+</body>
+</html>

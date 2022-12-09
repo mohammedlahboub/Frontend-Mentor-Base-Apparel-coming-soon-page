@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.red-outline {
+    outline: hsl(0, 93%, 68%) solid 2px;
+  }
